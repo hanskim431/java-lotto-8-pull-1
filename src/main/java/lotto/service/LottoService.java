@@ -20,7 +20,7 @@ public class LottoService {
     private final static int RANK3 = 3;
     private final static int RANK4 = 4;
     private final static int RANK5 = 5;
-    private final static int LOSE = 6;
+    private final static int LOSE = 0;
 
     public LottoService() {
     }
