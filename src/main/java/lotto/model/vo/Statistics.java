@@ -45,7 +45,6 @@ public class Statistics {
                 LOSE, lose
         );
 
-        validateNoGame(rankRecord);
 
         return new Statistics(rankRecord);
     }
@@ -71,8 +70,7 @@ public class Statistics {
         return ((double) earn) / investAmount * 100;
     }
 
-    private static void validateNoGame(Map<Integer, Integer> rankAmount) {
-        int gameAmount = rankAmount.values().stream().mapToInt(Integer::intValue).sum();
+    private static void validateNoGame(int gameAmount) {
         if (gameAmount == ZERO) {
             throw new IllegalArgumentException(ERROR_TAG + SPACE + NONE_GAME_NOT_ALLOW);
         }
